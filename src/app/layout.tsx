@@ -5,9 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Hermes Protocol — Premium SaaS Platform",
-  description:
-    "The most powerful serverless platform built by a 30-year veteran of the web. Zero-config, infinite scale, absolute precision.",
+  title: "HermesProtocol",
+  description: "Premium serverless platform",
 };
 
 export default function RootLayout({
@@ -17,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} antialiased bg-black text-white`}>
+      <body className="antialiased bg-black text-white">
         {children}
       </body>
     </html>
