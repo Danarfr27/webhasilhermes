@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: 255, 255, 255;
+  --background: 0, 0, 0;
+  --accent: 99, 102, 241;
+  --accent-secondary: 139, 92, 246;
+  --gradient-start: 99, 102, 241;
+  --gradient-end: 236, 72, 153;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, rgb(var(--gradient-start)), rgb(var(--gradient-end)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow { box-shadow: 0 0 40px rgba(99, 102, 241, 0.15); }
+.glow-strong { box-shadow: 0 0 80px rgba(99, 102, 241, 0.2); }
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
